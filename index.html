@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<div style="text-align:center">
-    <h1>I am Joel Runevic and I am Joel Runevic.</h1>
-    <img src="thumbnail_IMG_0014.jpg" width="500" height="500">
-</div>
-</body>
+<html>
+  <head>
+    <title>Countdown Timer</title>
+  </head>
+  <body>
+    <script>
+      // Set the target date to February 17th, 2023
+      var targetDate = new Date("February 17, 2023");
+
+      // Update the countdown every 1 second
+      setInterval(function() {
+        // Get the current date and time
+        var currentDate = new Date();
+
+        // Calculate the difference between the current date and the target date in milliseconds
+        var difference = targetDate - currentDate;
+
+        // Convert the difference to days
+        var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+        // Update the countdown element to include the text and the number of days
+        document.getElementById("countdown").innerHTML = "Benjamin Belay is the current owner of this website. Only " + days + " days until Joel Runevic owns this website.";
+      }, 1000);
+    </script>
+  </body>
 </html>
